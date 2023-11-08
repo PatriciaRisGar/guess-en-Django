@@ -1,0 +1,18 @@
+<html>
+  <head>
+    <title>Adivina</title>
+  </head>
+  <body>
+    <div>
+      <h1>Adivina app</h1>
+    </div>
+
+    <div>
+      <form action="{% url 'guess_request'%}" method="post">
+        {% csrf_token %}
+        <input type="number" name="guess" required />
+        <button type="submit">Aceptar</button>
+      </form>
+    </div>
+  </body>
+</html>
